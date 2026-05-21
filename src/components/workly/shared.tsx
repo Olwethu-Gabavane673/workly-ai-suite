@@ -43,7 +43,7 @@ export function EditableOutput({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       rows={minRows}
-      className={`w-full resize-y rounded-lg border border-white/10 bg-[#0d1117] p-4 text-sm text-foreground/95 outline-none focus:border-[#ff7a59]/60 focus:ring-2 focus:ring-[#ff7a59]/20 ${className}`}
+      className={`w-full resize-y rounded-lg input-surface p-4 text-sm text-foreground/95 outline-none focus:border-[#ff7a59]/60 focus:ring-2 focus:ring-[#ff7a59]/20 ${className}`}
     />
   );
 }

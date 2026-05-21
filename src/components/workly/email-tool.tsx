@@ -61,7 +61,7 @@ export function EmailGeneratorTool() {
             onChange={(e) => setContext(e.target.value)}
             rows={10}
             placeholder="Paste your notes or bullet points…"
-            className="w-full resize-y rounded-lg border border-white/10 bg-[#0d1117] p-4 text-sm outline-none focus:border-[#ff7a59]/60 focus:ring-2 focus:ring-[#ff7a59]/20"
+            className="w-full resize-y rounded-lg input-surface p-4 text-sm outline-none focus:border-[#ff7a59]/60 focus:ring-2 focus:ring-[#ff7a59]/20"
           />
 
           <div className="mt-4 flex items-center gap-3">
@@ -69,7 +69,7 @@ export function EmailGeneratorTool() {
             <select
               value={tone}
               onChange={(e) => setTone(e.target.value)}
-              className="rounded-md border border-white/10 bg-[#0d1117] px-3 py-2 text-sm outline-none focus:border-[#ff7a59]/60"
+              className="rounded-md input-surface px-3 py-2 text-sm outline-none focus:border-[#ff7a59]/60"
             >
               {TONES.map((t) => (
                 <option key={t} value={t}>

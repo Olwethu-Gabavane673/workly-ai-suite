@@ -62,7 +62,7 @@ export function NotesSummarizerTool() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             rows={14}
-            className="w-full resize-y rounded-lg border border-white/10 bg-[#0d1117] p-4 text-sm outline-none focus:border-[#ff7a59]/60 focus:ring-2 focus:ring-[#ff7a59]/20"
+            className="w-full resize-y rounded-lg input-surface p-4 text-sm outline-none focus:border-[#ff7a59]/60 focus:ring-2 focus:ring-[#ff7a59]/20"
           />
           <div className="mt-4 flex justify-end">
             <button
@@ -98,7 +98,7 @@ export function NotesSummarizerTool() {
               Summary will appear here once generated.
             </div>
           ) : (
-            <div className="rounded-lg border border-white/10 bg-[#0d1117] p-4">
+            <div className="rounded-lg input-surface p-4">
               {active === "executiveSummary" ? (
                 <textarea
                   value={summary.executiveSummary}
