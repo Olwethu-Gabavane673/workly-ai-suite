@@ -60,7 +60,7 @@ export function ChatTool() {
                 className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                   m.role === "user"
                     ? "bg-[#ff7a59] text-white"
-                    : "bg-[#0d1117] border border-white/10 text-foreground/95"
+                    : "input-surface text-foreground/95"
                 }`}
               >
                 {m.content}
