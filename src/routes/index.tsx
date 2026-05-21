@@ -61,10 +61,16 @@ function WorklyApp() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Top responsible-AI banner */}
-      <div className="border-b border-white/5 bg-[#0d1117]/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-1.5 text-[11px] text-muted-foreground">
-          <AlertTriangle className="size-3.5 text-amber-400/80" />
-          <span>AI-generated content may require human review</span>
+      <div className="border-b banner-surface backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-1.5 text-[11px] text-muted-foreground">
+          <div className="flex-1" />
+          <div className="flex items-center gap-2">
+            <AlertTriangle className="size-3.5 text-amber-400/80" />
+            <span>AI-generated content may require human review</span>
+          </div>
+          <div className="flex flex-1 justify-end">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
 
