@@ -68,6 +68,7 @@
   --coral: oklch(0.72 0.19 25);
   --coral-foreground: oklch(0.98 0 0);
   --surface-sidebar: #0d1117;
+  --surface-input: #0d1117;
   --surface-card: #161b22;
   --surface-banner: rgba(13, 17, 23, 0.8);
   --hairline: rgba(255,255,255,0.06);
@@ -101,6 +102,7 @@
   --sidebar-accent-foreground: oklch(0.2 0.02 260);
   --sidebar-border: oklch(0.2 0.02 260 / 8%);
   --surface-sidebar: #ffffff;
+  --surface-input: #ffffff;
   --surface-card: #ffffff;
   --surface-banner: rgba(255,255,255,0.85);
   --hairline: rgba(15, 23, 42, 0.08);
@@ -167,6 +169,13 @@
 .hairline { border-color: var(--hairline) !important; }
 .hover-overlay:hover { background: var(--hover-overlay); }
 .active-overlay { background: var(--active-overlay); }
+
+.input-surface {
+  background: var(--surface-input);
+  border: 1px solid var(--hairline);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
 
 .coral-link { color: #ff7a59; }
 .coral-link:hover { color: #ff4d8d; }
