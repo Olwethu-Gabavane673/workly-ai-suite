@@ -99,10 +99,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  const themeInit = `(function(){try{var t=localStorage.getItem('workly-theme');if(t!=='light'&&t!=='dark')t='dark';document.documentElement.classList.add(t);document.body&&document.body.classList.add(t);}catch(e){document.documentElement.classList.add('dark');}})();`;
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
       <body>
         {children}

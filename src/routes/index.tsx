@@ -22,6 +22,7 @@ import { NotesSummarizerTool } from "@/components/workly/notes-tool";
 import { TaskPlannerTool } from "@/components/workly/planner-tool";
 import { ResearchTool } from "@/components/workly/research-tool";
 import { ChatTool } from "@/components/workly/chat-tool";
+import { ThemeToggle } from "@/components/workly/theme-toggle";
 
 type ViewId = "dashboard" | "email" | "notes" | "planner" | "research" | "chat";
 
@@ -60,23 +61,29 @@ function WorklyApp() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Top responsible-AI banner */}
-      <div className="border-b border-white/5 bg-[#0d1117]/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-1.5 text-[11px] text-muted-foreground">
-          <AlertTriangle className="size-3.5 text-amber-400/80" />
-          <span>AI-generated content may require human review</span>
+      <div className="border-b banner-surface backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-1.5 text-[11px] text-muted-foreground">
+          <div className="flex-1" />
+          <div className="flex items-center gap-2">
+            <AlertTriangle className="size-3.5 text-amber-400/80" />
+            <span>AI-generated content may require human review</span>
+          </div>
+          <div className="flex flex-1 justify-end">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
 
       <div className="flex">
         {/* Sidebar */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-64 transform border-r border-white/5 bg-[#0d1117] transition-transform lg:static lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-64 transform border-r sidebar-surface transition-transform lg:static lg:translate-x-0 ${
             mobileOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           style={{ marginTop: 0 }}
         >
           <div className="flex h-full flex-col">
-            <div className="flex items-center justify-between border-b border-white/5 px-5 py-4">
+            <div className="flex items-center justify-between border-b hairline px-5 py-4">
               <div className="flex items-center gap-2">
                 <div className="flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#ff7a59] to-[#ff4d8d]">
                   <Sparkles className="size-4 text-white" />
@@ -87,7 +94,7 @@ function WorklyApp() {
                 </div>
               </div>
               <button
-                className="lg:hidden rounded-md p-1 text-muted-foreground hover:bg-white/5"
+                className="lg:hidden hover-overlay rounded-md p-1 text-muted-foreground"
                 onClick={() => setMobileOpen(false)}
                 aria-label="Close menu"
               >
@@ -109,8 +116,8 @@ function WorklyApp() {
                         onClick={() => navigate(item.id)}
                         className={`group flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition ${
                           active
-                            ? "bg-white/[0.06] text-foreground border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
-                            : "text-foreground/70 hover:bg-white/[0.04] hover:text-foreground"
+                            ? "active-overlay text-foreground border hairline"
+                            : "text-foreground/70 hover-overlay hover:text-foreground"
                         }`}
                       >
                         <Icon className={`size-4 ${active ? "text-[#ff7a59]" : ""}`} />
@@ -122,7 +129,7 @@ function WorklyApp() {
               </ul>
             </nav>
 
-            <div className="border-t border-white/5 px-5 py-4">
+            <div className="border-t hairline px-5 py-4">
               <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Powered by</div>
               <div className="mt-1 text-sm font-semibold text-foreground">CAPACITI</div>
             </div>
@@ -140,15 +147,16 @@ function WorklyApp() {
         {/* Main */}
         <main className="flex-1 min-w-0">
           {/* Mobile header */}
-          <div className="flex items-center gap-3 border-b border-white/5 px-4 py-3 lg:hidden">
+          <div className="flex items-center gap-3 border-b hairline px-4 py-3 lg:hidden">
             <button
               onClick={() => setMobileOpen(true)}
-              className="rounded-md p-1.5 text-muted-foreground hover:bg-white/5"
+              className="hover-overlay rounded-md p-1.5 text-muted-foreground"
               aria-label="Open menu"
             >
               <Menu className="size-5" />
             </button>
             <div className="text-sm font-semibold">Workly AI</div>
+            <div className="ml-auto"><ThemeToggle /></div>
           </div>
 
           <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
