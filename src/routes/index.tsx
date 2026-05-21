@@ -77,13 +77,13 @@ function WorklyApp() {
       <div className="flex">
         {/* Sidebar */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-64 transform border-r border-white/5 bg-[#0d1117] transition-transform lg:static lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-64 transform border-r sidebar-surface transition-transform lg:static lg:translate-x-0 ${
             mobileOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           style={{ marginTop: 0 }}
         >
           <div className="flex h-full flex-col">
-            <div className="flex items-center justify-between border-b border-white/5 px-5 py-4">
+            <div className="flex items-center justify-between border-b hairline px-5 py-4">
               <div className="flex items-center gap-2">
                 <div className="flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#ff7a59] to-[#ff4d8d]">
                   <Sparkles className="size-4 text-white" />
@@ -94,7 +94,7 @@ function WorklyApp() {
                 </div>
               </div>
               <button
-                className="lg:hidden rounded-md p-1 text-muted-foreground hover:bg-white/5"
+                className="lg:hidden hover-overlay rounded-md p-1 text-muted-foreground"
                 onClick={() => setMobileOpen(false)}
                 aria-label="Close menu"
               >
@@ -116,8 +116,8 @@ function WorklyApp() {
                         onClick={() => navigate(item.id)}
                         className={`group flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition ${
                           active
-                            ? "bg-white/[0.06] text-foreground border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
-                            : "text-foreground/70 hover:bg-white/[0.04] hover:text-foreground"
+                            ? "active-overlay text-foreground border hairline"
+                            : "text-foreground/70 hover-overlay hover:text-foreground"
                         }`}
                       >
                         <Icon className={`size-4 ${active ? "text-[#ff7a59]" : ""}`} />
@@ -129,7 +129,7 @@ function WorklyApp() {
               </ul>
             </nav>
 
-            <div className="border-t border-white/5 px-5 py-4">
+            <div className="border-t hairline px-5 py-4">
               <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Powered by</div>
               <div className="mt-1 text-sm font-semibold text-foreground">CAPACITI</div>
             </div>
