@@ -147,15 +147,16 @@ function WorklyApp() {
         {/* Main */}
         <main className="flex-1 min-w-0">
           {/* Mobile header */}
-          <div className="flex items-center gap-3 border-b border-white/5 px-4 py-3 lg:hidden">
+          <div className="flex items-center gap-3 border-b hairline px-4 py-3 lg:hidden">
             <button
               onClick={() => setMobileOpen(true)}
-              className="rounded-md p-1.5 text-muted-foreground hover:bg-white/5"
+              className="hover-overlay rounded-md p-1.5 text-muted-foreground"
               aria-label="Open menu"
             >
               <Menu className="size-5" />
             </button>
             <div className="text-sm font-semibold">Workly AI</div>
+            <div className="ml-auto"><ThemeToggle /></div>
           </div>
 
           <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
