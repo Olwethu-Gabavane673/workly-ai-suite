@@ -23,6 +23,7 @@ import { TaskPlannerTool } from "@/components/workly/planner-tool";
 import { ResearchTool } from "@/components/workly/research-tool";
 import { ChatTool } from "@/components/workly/chat-tool";
 import { ThemeToggle } from "@/components/workly/theme-toggle";
+import worklyLogo from "@/assets/workly-logo.png";
 
 type ViewId = "dashboard" | "email" | "notes" | "planner" | "research" | "chat";
 
@@ -85,9 +86,7 @@ function WorklyApp() {
           <div className="flex h-full flex-col">
             <div className="flex items-center justify-between border-b hairline px-5 py-4">
               <div className="flex items-center gap-2">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#ff7a59] to-[#ff4d8d]">
-                  <Sparkles className="size-4 text-white" />
-                </div>
+                <img src={worklyLogo} alt="Workly AI" className="size-8 rounded-lg object-cover" />
                 <div className="leading-tight">
                   <div className="text-sm font-semibold">Workly AI</div>
                   <div className="text-[10px] uppercase tracking-wider text-muted-foreground">by CAPACITI</div>
@@ -155,6 +154,7 @@ function WorklyApp() {
             >
               <Menu className="size-5" />
             </button>
+            <img src={worklyLogo} alt="Workly AI" className="size-6 rounded object-cover" />
             <div className="text-sm font-semibold">Workly AI</div>
             <div className="ml-auto"><ThemeToggle /></div>
           </div>
