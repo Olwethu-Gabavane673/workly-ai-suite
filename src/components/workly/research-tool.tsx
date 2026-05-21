@@ -40,7 +40,7 @@ export function ResearchTool() {
       <ErrorBanner message={err} />
 
       <div className="card-surface mb-5 flex flex-col gap-3 rounded-2xl p-5 sm:flex-row">
-        <div className="flex flex-1 items-center gap-2 rounded-lg border border-white/10 bg-[#0d1117] px-3">
+        <div className="flex flex-1 items-center gap-2 rounded-lg input-surface px-3">
           <Search className="size-4 text-muted-foreground" />
           <input
             value={topic}
@@ -100,7 +100,7 @@ export function ResearchTool() {
             <h3 className="mb-3 text-sm font-semibold">Actionable recommendations</h3>
             <ol className="grid gap-2 sm:grid-cols-2">
               {data.recommendations.map((s, i) => (
-                <li key={i} className="flex gap-3 rounded-lg border border-white/10 bg-[#0d1117] px-3 py-2 text-sm">
+                <li key={i} className="flex gap-3 rounded-lg input-surface px-3 py-2 text-sm">
                   <span className="font-mono text-xs text-[#ff7a59]">{String(i + 1).padStart(2, "0")}</span>
                   <input
                     value={s}

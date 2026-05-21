@@ -77,7 +77,7 @@ export function ChatTool() {
               <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#ff7a59] to-[#ff4d8d] text-white">
                 <Bot className="size-4" />
               </div>
-              <div className="rounded-2xl border border-white/10 bg-[#0d1117] px-4 py-2.5 text-sm text-muted-foreground">
+              <div className="rounded-2xl input-surface px-4 py-2.5 text-sm text-muted-foreground">
                 <Loader2 className="inline size-4 animate-spin" /> Thinking…
               </div>
             </div>
@@ -87,7 +87,7 @@ export function ChatTool() {
       </div>
 
       <div className="mt-4">
-        <div className="mx-auto flex max-w-3xl items-end gap-2 rounded-2xl border border-white/10 bg-[#0d1117] p-2">
+        <div className="mx-auto flex max-w-3xl items-end gap-2 rounded-2xl input-surface p-2">
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
