@@ -8,7 +8,7 @@ export function ChatTool() {
     {
       role: "assistant",
       content:
-        "Hi — I'm your Workly assistant. Ask me to draft a message, plan your day, summarize something, or just think out loud with you.",
+        "hi I am olwethu let's chat about anything",
     },
   ]);
   const [input, setInput] = useState("");
