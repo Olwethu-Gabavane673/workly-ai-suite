@@ -22,6 +22,7 @@ import { NotesSummarizerTool } from "@/components/workly/notes-tool";
 import { TaskPlannerTool } from "@/components/workly/planner-tool";
 import { ResearchTool } from "@/components/workly/research-tool";
 import { ChatTool } from "@/components/workly/chat-tool";
+import { ThemeToggle } from "@/components/workly/theme-toggle";
 
 type ViewId = "dashboard" | "email" | "notes" | "planner" | "research" | "chat";
 
